@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Text Now</title>
+</head>
+<body>
+  <button onclick="openFullscreen();">Make fullscreen</button>
+<iframe id="game" src="https://www.textnow.com/messaging" width="100%" sandbox="allow-forms allow-popups allow-pointer-lock allow-same-origin allow-scripts" height="100%" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen></iframe>
+
+<script>
+var elem = document.getElementById("game");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
+</body>
+</html>
